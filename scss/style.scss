@@ -1,0 +1,134 @@
+$color-btn: #237a2f;
+$color-border: #e40f4fd8;
+$color-black: black;
+$border-circle: 50%;
+$font-bolder: bolder;
+$font-size25: 25px;
+$border: $color-border dotted 5px;
+$align-btn-note: flex-end;
+
+%size {
+    width: 150px;
+    height: 80px;
+};
+
+@mixin flex-align-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+@mixin text {
+    color: $color-black;
+    font-weight: $font-bolder;
+    font-size: $font-size25;
+}
+
+@mixin border {
+    border: $border;
+    border-radius: $border-circle;
+}
+
+@mixin flex-direction-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+
+@mixin flex-direction-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+@mixin align-item-btn {
+    -ms-flex-item-align: $align-btn-note;
+        -ms-grid-row-align: $align-btn-note;
+        align-self: $align-btn-note;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 26, 255, 0.664);
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1000px;
+    @include flex-align-center();
+    @include flex-direction-row();
+
+    p {
+        @include text();
+        margin: 0px 20px;
+        text-align: center;
+    }
+
+    #colorInput {
+        @include border();
+        @extend %size;
+        background-color: green;
+        padding: 15px;
+        
+    }
+
+    #newNoteBtn {
+        @include text();
+        @include border();
+        @extend %size;
+        background-color: $color-btn;
+        margin: 10px 0px;
+        padding: 10px;
+    }
+
+}
+
+.note {
+    @include flex-align-center();
+    @include flex-direction-column();
+    width: 200px;
+    height: 250px;
+    font-size: 0px;
+}
+    
+.note-close {
+    width: 10%;
+    padding: 2px;
+    @include align-item-btn();
+}    
+    
+.note-content {
+    @include text();
+    @include flex-align-center();
+    padding: 15px 5px 10px 5px;
+}
+    
+.d-none {
+    display: none;
+}
+
+.note-text {
+    padding: 5px;
+    font-size: 12px;
+    color: $color-black;
+    height: 62%;
+}
+
+.note-edit-btn {
+    width: 13%;
+    @include align-item-btn();
+}

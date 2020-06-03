@@ -1,0 +1,33 @@
+{
+  "name": "App-Note",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html --open",
+    "lint": "eslint ./js",
+    "lint:fix": "eslint ./js --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-babel": "^9.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.7"
+  },
+  "dependencies": {},
+  "description": "This is funny app note, where you write important information",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gerakl22/App-Note.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gerakl22/App-Note/issues"
+  },
+  "homepage": "https://github.com/Gerakl22/App-Note#readme"
+}
