@@ -24,7 +24,6 @@ export class Note {
 
     this.data[index].left = coordinats.x;
     this.data[index].top = coordinats.y;
-    console.log(this.data);
   }
 
   // Create constructor our note
